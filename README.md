@@ -1,7 +1,6 @@
 # simple-s3fs
 
-A simple (read-only) FUSE-based file system for S3 buckets. 
-Forked from https://github.com/higlass/simple-httpfs
+A simple (read-only) FUSE-based file system for S3 buckets.
 
 ## Usage
 
