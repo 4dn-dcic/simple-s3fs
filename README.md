@@ -10,7 +10,7 @@ simple-s3fs --aws-profile default -f -l /tmp/s3.log /tmp/s3/<bucket>
 less /tmp/s3/<bucket>/folder/file.txt
 ```
 
-Please note: Folders in buckets cannot have `.` and files must have an extension (i.e. a `.`)
+Please note: Folders in buckets cannot have `.` in their names and files must have an extension (i.e. a `.`)
 
 
 ## Unmounting
