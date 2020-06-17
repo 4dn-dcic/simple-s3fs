@@ -28,9 +28,9 @@ install `simple-s3fs` with develop mode:
 pip install -e .
 ```
 
-.. Important::
 
- This is a FORK of Peter Kerpedjiev's `simple-httpfs <https://github.com/higlass/simple-httpfs>`_
+### Important
+
+ This is a FORK of Peter Kerpedjiev's [simple-httpfs](https://github.com/higlass/simple-httpfs)
  package. It was adapted to the needs of projects at the
- `4D Nucleome Data Coordination and Integration Center (4DN-DCIC)
- <https://github.com/4dn-dcic>`_.
+ [4D Nucleome Data Coordination and Integration Center (4DN-DCIC)](https://github.com/4dn-dcic).
