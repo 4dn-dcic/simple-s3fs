@@ -1,0 +1,2 @@
+include versioneer.py
+include simple_s3fs/_version.py

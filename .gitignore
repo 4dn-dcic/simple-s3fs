@@ -1,0 +1,10 @@
+notebooks
+*.un~
+*.swp
+*.swo
+*.egg-info/
+.DS_Store
+__pycache__/
+.py[cod]
+/build
+/dist

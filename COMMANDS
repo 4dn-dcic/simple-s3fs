@@ -1,0 +1,7 @@
+python setup.py sdist upload -r pypi
+
+# Mouting bucket <bucket>
+simple-s3fs --aws-profile default -f -l /tmp/s3.log /tmp/s3/<bucket>
+
+# Accessing file in bucket, e.g.,
+less /tmp/s3/<bucket>/folder/file.txt
