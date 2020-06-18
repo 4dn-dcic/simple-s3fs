@@ -134,7 +134,7 @@ class HttpFs(LoggingMixIn, Operations):
             raise
 
     def getattr(self, path, fh=None):
-        print("getattr path {}".format(path))
+        # print("getattr path {}".format(path))
         try:
             if path in self.lru_attrs:
                 return self.lru_attrs[path]
@@ -187,7 +187,7 @@ class HttpFs(LoggingMixIn, Operations):
         return 0
 
     def read(self, path, size, offset, fh):
-        print("Read path {}".format(path))
+        # print("Read path {}".format(path))
         t1 = time()
 
         if t1 - self.last_report_time > REPORT_INTERVAL:
