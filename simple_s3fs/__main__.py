@@ -91,7 +91,8 @@ Mounting HTTP Filesystem...
                logger = logger
             ),
         args['mountpoint'],
-        foreground=args['foreground']
+        foreground=args['foreground'],
+        direct_io=True
     )
 
 
