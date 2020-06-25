@@ -1,5 +1,6 @@
 python3 setup.py sdist bdist_wheel #create package
-python setup.py sdist upload -r pypi
+#python setup.py sdist upload -r pypi
+python -m twine upload dist/*
 
 # Mouting bucket <bucket>
 simple-s3fs --aws-profile default -f -l /tmp/s3.log /tmp/s3/<bucket>

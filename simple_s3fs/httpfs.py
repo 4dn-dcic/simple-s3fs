@@ -121,6 +121,7 @@ class HttpFs(LoggingMixIn, Operations):
         self.lru_hits = 0
         self.lru_misses = 0
 
+        self.lru_capacity = lru_capacity
         self.disk_hits = 0
         self.disk_misses = 0
         self.block_size = block_size
@@ -192,8 +193,8 @@ class HttpFs(LoggingMixIn, Operations):
 
         if t1 - self.last_report_time > REPORT_INTERVAL:
             self.logger.info(
-                        "lru hits: {} lru misses: {} disk hits: {} total_requests: {}".format(
-                            self.lru_hits, self.lru_misses, self.disk_hits, self.disk_misses, self.total_requests
+                        "num lru_attrs: {}/{} lru hits: {} lru misses: {} disk hits: {} total_requests: {}".format(
+                            len(self.lru_attrs), self.lru_capacity, self.lru_hits, self.lru_misses, self.disk_hits, self.disk_misses, self.total_requests
                         )
                     )
             self.last_report_time = t1
