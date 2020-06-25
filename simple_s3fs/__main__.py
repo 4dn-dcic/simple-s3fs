@@ -92,7 +92,8 @@ Mounting HTTP Filesystem...
             ),
         args['mountpoint'],
         foreground=args['foreground'],
-        direct_io=True
+        attr_timeout=0.0,
+        entry_timeout=0.0
     )
 
 
