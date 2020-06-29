@@ -53,10 +53,11 @@ def main():
     if not os.path.isdir(args['mountpoint']):
         try:
             Path(args['mountpoint']).mkdir(mode=0o644, parents=True, exist_ok=True)
-        except:
+        except OSError as e:
             print("Mount point must be a directory: {}".format(args['mountpoint']),
                 file=sys.stderr)
-            sys.exit(1)
+            print(e.strerror, file=sys.stderr)
+            #sys.exit(1)
 
     logger = logging.getLogger('simple-s3fs')
     logger.setLevel(logging.INFO)
