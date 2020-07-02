@@ -189,6 +189,7 @@ class HttpFs(LoggingMixIn, Operations):
 
     def read(self, path, size, offset, fh):
         # print("Read path {}".format(path))
+
         t1 = time()
 
         if t1 - self.last_report_time > REPORT_INTERVAL:
